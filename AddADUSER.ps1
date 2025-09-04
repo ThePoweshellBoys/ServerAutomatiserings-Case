@@ -26,7 +26,7 @@ Write-Output($users);
 
 $Session = New-PSSession -Computername 10.101.232.173 -Credential Administrator
 try {
-    $targetOU2 = "OU=Users,DC=Gruppe3,DC=dk"
+    $targetOU2 = "OU=Users,DC=Gruppe3"
     Invoke-Command -Session $Session -ArgumentList $users, $targetOU2 -ScriptBlock {
         param ($users, $targetOU)
         Import-Module ActiveDirectory
@@ -57,3 +57,4 @@ finally {
     Remove-PSSession -Session $Session
     Write-Host "Session closed."
 }
+
