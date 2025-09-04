@@ -1,0 +1,34 @@
+# Hurtig opsætningsguide: DNS & AD på Windows Server 2025
+
+## 1. Forbered serveren
+- Installer Windows Server 2025.
+- Tildel en statisk IP-adresse.
+
+## 2. Installer DNS-rollen
+1. Åbn **Server Manager**.
+2. Klik på **Manage** > **Add Roles and Features**.
+3. Vælg **Role-based or feature-based installation**.
+4. Vælg din server.
+5. Marker **DNS Server** og klik **Next** > **Install**.
+
+## 3. Installer Active Directory Domain Services (AD DS)
+1. I **Server Manager**, klik på **Manage** > **Add Roles and Features**.
+2. Vælg **Active Directory Domain Services**.
+3. Klik **Next** og **Install**.
+
+## 4. Promover serveren til domænecontroller
+1. Efter installation, klik på **Promote this server to a domain controller**.
+2. Vælg **Add a new forest** og indtast dit domænenavn (fx `gruppe3.dk`).
+3. Vælg domæne- og DSRM-adgangskode.
+4. Bekræft DNS-indstillinger (DNS installeres automatisk).
+5. Klik **Next** og **Install**.
+
+## 5. Verificer opsætning
+- Genstart serveren.
+- Tjek at DNS og AD DS kører via **Server Manager**.
+- Brug **Active Directory Users and Computers** til at oprette brugere.
+
+## 6. Tilføj klienter til domænet
+- På klient-PC: Højreklik på **Denne PC** > **Egenskaber** > **Skift indstillinger** > **Domæne**.
+- Indtast domænenavn og administratoroplysninger.
+
