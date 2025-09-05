@@ -11,7 +11,7 @@
 
 
 #AD OG DNS
-Vi installerede Windows Server 2025 og tildelte en statisk IP. Derefter tilføjede vi rollerne DNS og Active Directory Domain Services i Server Manager. Vi promoverede serveren til domænecontroller og oprettede et nyt forest med domænenavnet gruppe3.dk. Formålet med at installere AD er, at vi kan skubbe brugere direkte fra vores mock_database.csv over på AD(Vi kunne ikke komme ind på vores databaseServer så vi gjorde det med en csv) for nemt at kunne administrere dem i domænet. Til sidst testede vi ved at bruge AddADUSER.ps1 scriptet i Poweshell som vi kørte som Administrator.
+- Vi installerede Windows Server 2025 og tildelte en statisk IP. Derefter tilføjede vi rollerne DNS og Active Directory Domain Services i Server Manager. Vi promoverede serveren til domænecontroller og oprettede et nyt forest med domænenavnet gruppe3.dk. Formålet med at installere AD er, at vi kan skubbe brugere direkte fra vores mock_database.csv over på AD(Vi kunne ikke komme ind på vores databaseServer så vi gjorde det med en csv) for nemt at kunne administrere dem i domænet. Til sidst testede vi ved at bruge AddADUSER.ps1 scriptet i Poweshell som vi kørte som Administrator.
 
 
 
